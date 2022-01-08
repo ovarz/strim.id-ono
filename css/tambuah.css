@@ -1,0 +1,48 @@
+.site-container{min-height:calc(100vh - var(--body-padding));}
+.sticky-button svg{width:auto; height:20px;}
+footer{padding-bottom:var(--section-space-medium) !important; margin-top:0 !important;}
+
+.header-info-clicked{fill:var(--color-link-secondary) !important;}
+
+.video-page{grid-gap:0;}
+.section-video-player{position:relative; width:100%;}
+.section-video-player iframe{position:absolute; top:0; left:0; width:100%; height:100%;}
+.detail-info-desc{margin-top:var(--section-space-small); color:var(--color-link-primary); line-height:140%; font-size:12px;}
+.section-info-bottom{margin:var(--section-space-medium) 0 0;}
+.comment{margin-top:var(--section-space-big);}
+.comment .section-title{display:none;}
+.comment-form-field{padding:var(--section-space-small); border:1px solid rgba(255,255,255,0.1);}
+.comment-form-user{width:100%; justify-content:flex-start;}
+.comment-list{--thumb-size:36px;}
+.comment-info *{font-size:12px !important;}
+.comment-form-submit .btn{border-radius:8px;}
+
+@media screen and (max-width:1023px){
+  .section-video-player{margin:0; z-index:2000;}
+  .section-video-player:before{content:''; display:block; padding-top:56.25%;}
+  
+  @media screen and (orientation:portrait){
+    .section-video-player{position:sticky; top:var(--body-padding);}
+  }
+  
+  @media screen and (orientation:landscape){
+    .section-video-player{position:relative; top:0;}
+  }
+}
+
+@media screen and (min-width:1024px){
+  .section-profile-streamer{grid-template-columns:140px 1fr 90px;}
+  .ssp-info{padding-bottom:var(--section-space-big); padding-left:var(--section-space-medium);}
+  .ssp-name{font-size:24px;}
+  
+  .section-video-info::-webkit-scrollbar{width:7px;}
+  .section-video-info::-webkit-scrollbar-track, .section-video-info::-webkit-scrollbar-thumb{background:0;}
+  .section-video-info:hover::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.25);}
+  .section-video-info::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,0.35);}
+  
+  .video-page{grid-template-columns:1fr 340px;}
+  .video-page-full{grid-template-columns:1fr;}
+  .video-page-full .section-video-info{display:none;}
+  .section-video-player, .section-video-info{height:calc(100vh - var(--body-padding)); margin:0; transition:all 0.25s;}
+  .section-video-info{overflow-y:auto; padding:var(--section-space-medium);}
+}
