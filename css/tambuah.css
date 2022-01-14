@@ -1,0 +1,5 @@
+.section-profile-streamer{grid-template-columns:100px 1fr; grid-gap:var(--section-space-small);}
+.ssp-name{font-size:24px; padding-bottom:var(--section-space-small);}
+.videopage-desc{margin-top:var(--section-space-medium); padding-top:var(--section-space-medium); border-top:1px dashed rgba(255,255,255,0.25);}
+
+footer{padding-bottom:var(--section-space-medium) !important;}
